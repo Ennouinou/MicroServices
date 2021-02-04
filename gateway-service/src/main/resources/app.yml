@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: r1
+          uri: lb://DEPARTMENT-SERVICE
+          predicates:
+            - Path= /departments/**
+        - id: r2
+          uri: lb://FORMATION-SERVICE
+          predicates:
+            - Path= /formations/**
