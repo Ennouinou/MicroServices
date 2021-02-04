@@ -13,8 +13,10 @@ import javax.persistence.Id;
 
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class Department {
-
     private Long id;
     private String name;
 }
